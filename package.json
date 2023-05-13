@@ -1,0 +1,28 @@
+{
+  "name": "nodejs_api",
+  "version": "1.0.0",
+  "description": "learn about basic of node js api",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishwajitvm/Nodejs_apis.git"
+  },
+  "keywords": [
+    "vishwajit",
+    "vm"
+  ],
+  "author": "vishwajit vm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishwajitvm/Nodejs_apis/issues"
+  },
+  "homepage": "https://github.com/vishwajitvm/Nodejs_apis#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
