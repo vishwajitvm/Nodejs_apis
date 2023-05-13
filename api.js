@@ -4,13 +4,16 @@ const port = process.env.port || 8080 ;
 const app = express() ;
 let time = new Date();
 
-//GET DATA FROM MONGO DB
-  const getData = async () => {
+
+//####################ROUTE################
+//####################ROUTE################
+//GET API
+app.get("/" , async (req , resp) => {
     let data = await dbConnect ;
     data = await data.find().toArray() ;
-    console.log(data);
-  }
-  getData();
+    resp.send(data) ;
+})
+
 
 
 app.listen(port) ;
