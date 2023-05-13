@@ -4,6 +4,10 @@ const port = process.env.port || 8080 ;
 const app = express() ;
 let time = new Date();
 
+//####################MIDDLEWARE################
+//####################MIDDLEWARE################
+app.use(express.json())
+
 
 //####################ROUTE################
 //####################ROUTE################
@@ -14,6 +18,13 @@ app.get("/" , async (req , resp) => {
     resp.send(data) ;
 })
 
+//POST API
+app.post('/' , async (req, resp) => {
+    let data = await dbConnect ;
+    let result = await data.insertOne(req.body)
+    console.log(req.body);
+    resp.send(result)
+})
 
 
 app.listen(port) ;
