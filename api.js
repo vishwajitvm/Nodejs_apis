@@ -26,5 +26,15 @@ app.post('/' , async (req, resp) => {
     resp.send(result)
 })
 
+//PUT API
+app.put("/" , async (req, resp) => {
+    let data = await dbConnect ;
+    let result = await data.updateOne(
+        {title: req.body.title} ,
+        {$set : req.body}
+    )
+    resp.send(result)
+    console.log(result);
+})
 
 app.listen(port) ;
